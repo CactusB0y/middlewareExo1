@@ -27,5 +27,5 @@ Auth::routes();
 
 Route::get('/home', function() {
     return view('home');
-})->name('home')->middleware('Auth1');
+})->name('home')->middleware('RoleVerification');
 Route::resource('article', ArticleController::class,)->middleware('Auth1');
